@@ -1,0 +1,35 @@
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><element><id>UMLActor</id><coordinates><x>220</x><y>330</y><w>60</w><h>110</h></coordinates><panel_attributes>Usuario</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLUseCase</id><coordinates><x>170</x><y>500</y><w>170</w><h>90</h></coordinates><panel_attributes>Interfaz Principal 
+-
+buscarArticulos()
+bg=blue</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>230</x><y>420</y><w>40</w><h>100</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>20;80;15;12</additional_attributes></element><element><id>UMLClass</id><coordinates><x>480</x><y>300</y><w>210</w><h>190</h></coordinates><panel_attributes>Repositorio Principal
+--
+
+- getArticulos()
+- ConsumierDataJson()
+
+--
+Responsibilities
+- Dar informacion al Usuario 
+de lo que se trata.
+- Dar visivilidad a los Articulos
+ya Existentes</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>310</x><y>480</y><w>230</w><h>80</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;60;205;12</additional_attributes></element><element><id>UMLClass</id><coordinates><x>790</x><y>90</y><w>210</w><h>110</h></coordinates><panel_attributes>Repositorio De Spring Boot
+--
+- ConexionMysql()
+- MostrarDataJson()
+- EndPointPut()
+- EndPointDelete()
+- EndPontAdd()</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>620</x><y>180</y><w>240</w><h>210</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>220;10;15;182</additional_attributes></element><element><id>UMLNote</id><coordinates><x>940</x><y>240</y><w>140</w><h>50</h></coordinates><panel_attributes>Base De Datos Mysql
+bg=blue</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>940</x><y>140</y><w>70</w><h>120</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>50;100;15;12</additional_attributes></element><element><id>UMLUseCase</id><coordinates><x>560</x><y>620</y><w>140</w><h>60</h></coordinates><panel_attributes>CRUD ARTICULOS</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>820</x><y>190</y><w>90</w><h>490</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;470;70;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>770</x><y>660</y><w>210</w><h>190</h></coordinates><panel_attributes>CrudArticulos
+--
+- id:int
+- id_Usuario: String
+- art_titulo: String
+- parrafo1: String
+- parrafo2: String
+--
+- agregarArt()
+- eliminarArt()
+- EdiutarArt()
+--
+Responsibilities
+Dar Interfaz Crud</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>650</x><y>640</y><w>140</w><h>80</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>120;60;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>300</x><y>550</y><w>350</w><h>90</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;330;70</additional_attributes></element></diagram>
