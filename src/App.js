@@ -1,14 +1,19 @@
 import './App.css';
-import peliculasX from './peliculas.json';
 import Pelicula from './pelicula';
 import { useState } from 'react';
 import { Pagination } from '@mui/material';
 
 function App() {
   const [paginaActual, setPaginaActual] = useState(1);
+  const [peliculas , setPeliculas] = useState([]);
   const TOTAL_POR_PAGINA = 2;
 
-  let peliculas = peliculasX;
+  const buscarPeliculas = async () =>{
+    let url = 'https://lucasmoy.dev/data/react/peliculas.json';
+    let resultado = await fetch(url)
+    let json = await resultado.json()
+    setPeliculas(json)
+  }
 
   const handlePaginaCambio = (event, numeroPagina) => {
     setPaginaActual(numeroPagina);
@@ -24,6 +29,8 @@ function App() {
 
   return (
     <>
+
+    <button onClick={buscarPeliculas}>Buscar Peliculas</button>
       <div className="page-wrapper">
         {cargarPeliculas().map((pelicula) => (
           <Pelicula
