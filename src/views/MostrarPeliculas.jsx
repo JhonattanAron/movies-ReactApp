@@ -11,7 +11,7 @@ function MostrarPeliculas() {
 
     useEffect(() => {
         buscarPeliculas()
-    }, [])
+    }, [/*Aqui va el componente que aga q ejecute la funcion.A si cambia`*/])
 
     const buscarPeliculas = async () => {
         let url = 'https://lucasmoy.dev/data/react/peliculas.json';
@@ -46,8 +46,6 @@ function MostrarPeliculas() {
                     </Pelicula>
                 ))}
             </div>
-
-            {/* Mostrar el componente Pagination de Material-UI */}
             <Pagination
                 count={totalPaginas()}
                 page={paginaActual}
